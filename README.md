@@ -1,0 +1,52 @@
+# Library Management System
+
+# About
+A local library is in dire need of a web application to ease their work.The library management
+system must allow a librarian to track books and their quantity, books issued to members.
+
+# Getting Started
+1.Install requirements :-
+   pip install -r requirements.txt
+
+2.Setup MySQL and replace host, user, password values in app.py  as required.
+
+3.Run app
+python app.py
+
+# Screenshots:
+# Books
+![Screenshot from 2023-12-15 12-34-25](https://github.com/deeptigupta222/library-management-system-flask-g/assets/121033115/b24b431b-863a-43c6-8fae-c6d17f52cb29)
+
+Issue a Book
+
+![Screenshot from 2023-12-15 12-35-39](https://github.com/deeptigupta222/library-management-system-flask-g/assets/121033115/0d38f718-32e3-442c-900d-cffd23f530f4)
+![Screenshot from 2023-12-15 12-35-51](https://github.com/deeptigupta222/library-management-system-flask-g/assets/121033115/31f072ea-9b06-40b6-92be-6bb2be2e9208)
+Iussed book
+
+![Screenshot from 2023-12-15 12-36-37](https://github.com/deeptigupta222/library-management-system-flask-g/assets/121033115/b7a9e0f5-1844-46e4-b21e-bb24692be4f9)
+Book deleted
+
+![Screenshot from 2023-12-15 12-37-00](https://github.com/deeptigupta222/library-management-system-flask-g/assets/121033115/42a39882-ee56-4ab7-b85b-f022927ee5b7)
+
+# Member
+![Screenshot from 2023-12-15 12-37-55](https://github.com/deeptigupta222/library-management-system-flask-g/assets/121033115/9828663d-6d5a-47e8-ba4c-eaccb8fac6e1)
+![Screenshot from 2023-12-15 12-39-17](https://github.com/deeptigupta222/library-management-system-flask-g/assets/121033115/e260640c-6cea-443b-b874-cc5f7d02be6b)
+![Screenshot from 2023-12-15 12-39-26](https://github.com/deeptigupta222/library-management-system-flask-g/assets/121033115/7fda8c2c-415e-4eb9-bd72-4076ef152cdc)
+![Screenshot from 2023-12-15 12-39-35](https://github.com/deeptigupta222/library-management-system-flask-g/assets/121033115/50b47b31-e8ec-4d01-aa37-043aaab13345)
+![Screenshot from 2023-12-15 12-40-42](https://github.com/deeptigupta222/library-management-system-flask-g/assets/121033115/df9b6a28-8ab4-4265-90bb-724e9dde762e)
+![Screenshot from 2023-12-15 12-40-48](https://github.com/deeptigupta222/library-management-system-flask-g/assets/121033115/4e2f5292-89a7-41ed-af62-6542cab56fab)
+
+![Screenshot from 2023-12-15 12-40-54](https://github.com/deeptigupta222/library-management-system-flask-g/assets/121033115/961e89e0-2fc4-430f-bc44-6a046029f838)
+
+# Searching Books From API
+
+![Screenshot from 2023-12-14 03-46-30](https://github.com/deeptigupta222/library-management-system-project-in-python-flask/assets/121033115/d73171a1-52e5-4fea-b5c2-57be955ebd45)
+
+![Screenshot from 2023-12-14 03-46-44](https://github.com/deeptigupta222/library-management-system-project-in-python-flask/assets/121033115/560f3db8-cb41-4a75-b286-6a06d9f5b2a0)
+![Screenshot from 2023-12-15 12-46-43](https://github.com/deeptigupta222/library-management-system-flask-g/assets/121033115/603d1c11-6945-4bef-bc40-488a1d11bca2)
+
+
+![Screenshot from 2023-12-14 03-46-55](https://github.com/deeptigupta222/library-management-system-project-in-python-flask/assets/121033115/2934b795-8f73-416c-8fb4-6dd9839563d0)
+
+
+

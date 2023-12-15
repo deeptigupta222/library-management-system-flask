@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% block body %}
+<br>
+<h1>Add New Book</h1>
+{% from "includes/_formhelpers.html" import render_field %}
+<form method="POST" action="">
+    <div class="form-group">
+        {{ render_field(form.bookName, class_="form-control") }}
+    </div><br>
+    <div class="form-group">
+        {{ render_field(form.issueDate, class_="form-control") }}
+    </div><br>
+    <div class="form-group">
+        {{ render_field(form.returnDate, class_="form-control", type="date") }}
+    </div>
+    <br>
+    <div class="form-group">
+        {{ render_field(form.email, class_="form-control") }}
+    </div>
+    <br>
+    <p><button type="submit" class="btn btn-primary" value="Submit">Submit</button></p>
+</form>
+{% endblock %}

@@ -1,0 +1,63 @@
+{% include "header.html" %}
+
+<link href="{{url_for('static', filename = 'css/bootstrap.min.css')}}" rel="stylesheet">
+
+{% block body %}
+<div class="container">
+
+    <div class="row">
+        
+        <div class="col md-12">
+            <div class="row">
+                <div class="col-md-6">
+                </div>
+                <div class="col-md-6 text-right">
+                    <a href="{{ url_for('add_member') }}" class="btn btn-success">Add Member</a>
+                </div>
+            </div>
+
+            <table class="table">
+                <thead>
+                   <tr>
+                    <th>Serial Number</th>
+                   <th>Name</th>
+                   <th>Email</th>
+                   <th>Contact</th>
+                   <th>Num of Book Issued</th>
+                   <th>Action</th>
+                   </tr>
+                </thead>
+                <tbody>
+                   {%set i=0%}
+                   
+                   {%for row in  Issue %}
+                   {%set i=i+1%}
+                   <tr>
+                      <th scope="row">{{i}}</th>
+                      <td>{{row.1}}</td>
+                      <td>{{row.2}}</td>
+                      <td>{{row.3}}</td>
+                      <td>{{0 if (row.4==None) else row.4 }}</td>
+                      <td><a href="edit_member/{{row.0}}" class="btn btn-primary pull-right">Edit</a></td>
+                      <td><a href="delete/{{row.0}}" class="btn btn-primary pull-right">Delete</a></td>
+
+                   </tr>
+                   {%endfor%}
+                </tbody>
+                </table>
+                
+               
+        </div>
+
+        {% include "footer.html" %}
+    </div>
+
+
+</div>
+
+
+{% endblock %}
+  
+<script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+
+<script type="text/javascript" src="{{url_for('static', filename = 'js/bootstrap.min.js')}}"></script> 

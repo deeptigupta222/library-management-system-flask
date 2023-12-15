@@ -1,0 +1,65 @@
+{% include "header.html" %}
+
+<link href="{{url_for('static', filename = 'css/bootstrap.min.css')}}" rel="stylesheet">
+
+{% block body %}
+<div class="container">
+
+    <div class="row">
+        <div class="col md-12">
+            <table class="table">
+                   <tr>
+                   <th>Serial</th>
+                   <th>Name</th>
+                   <th>Book Name</th>
+                   <th>Iusse Date</th>
+                   <th>Return Date</th> 
+                   <th>Contact Number</th>
+                   <th>Email id</th>
+                   <th>Action</th>
+                   </tr>
+                <tbody>
+                   {%set i=0%}
+                   
+                   {%for row in  Issuer %}
+                   {%set i=i+1%}
+                   <tr>
+                      <th scope="row">{{i}}</th>
+                      <td>{{row.0}}</td>
+                       <td>{{row.4}}</td>
+                      <td>{{row.5}}</td>
+                      <td>{{row.6}}</td>
+                      <td>{{row.1}}</td>
+                      <td>{{row.2}}</td>
+                      <!-- <td><a href="edit_book/{{row.9}}" class="btn btn-primary pull-right">Edit</a></td> -->
+                      <td>
+                        <form action="{{ url_for('delete_book', book_name=row.9) }}" method="POST">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <input type="submit" value="Delete" class="btn btn-danger">
+                        </form>
+                        
+                      </td> 
+
+                       <!-- <td><button type="button" class="btn btn-success  pull-right" data-toggle="modal" data-target="#myModal"> Edit  </button></td>
+                       <td><button type="button" class="btn btn-success  pull-right" data-toggle="modal" data-target="#myModal"> Update </button></td>
+                          -->
+                   </tr>
+                   {%endfor%}
+                </tbody>
+                </table>
+                
+               
+        </div>
+
+        {% include "footer.html" %}
+    </div>
+
+
+</div>
+
+
+{% endblock %}
+  
+<script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+
+<script type="text/javascript" src="{{url_for('static', filename = 'js/bootstrap.min.js')}}"></script>

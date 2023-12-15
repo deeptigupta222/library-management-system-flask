@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block body %}
+<br>
+<h1>Edit Book</h1>
+{% from "includes/_formhelpers.html" import render_field %}
+<form method="POST" action="{{ url_for('edit_book', bookId=book[3]) }}">
+    <div class="form-group">
+        {{ render_field(form.bookName, class_="form-control", value=book[4] ) }}
+    </div><br>
+    <div class="form-group">
+        {{ render_field(form.issueDate, class_="form-control", type="date", value=book[5]) }}
+    </div><br>
+    <div class="form-group">
+        {{ render_field(form.returnDate, class_="form-control", type="date", value=book[6]) }}
+    </div><br>
+    <div class="form-group">
+        {{ render_field(form.email, class_="form-control", value=book[2]) }}
+    </div>
+    <br>
+    <p><button type="submit" class="btn btn-primary" value="Submit">Submit</button></p>
+</form>
+{% endblock %}

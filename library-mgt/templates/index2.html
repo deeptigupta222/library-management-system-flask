@@ -1,0 +1,159 @@
+{% include "header.html" %}
+
+<link href="{{url_for('static', filename = 'css/bootstrap.min.css')}}" rel="stylesheet">
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col md-12">
+    {%with messages = get_flashed_messages()%}
+
+    {%if messages%}
+
+    {% for message in messages %}
+
+    <div class="alert alert-success alert-dismissable" role="alert">
+     <button type="button" class="close" data-dismiss="alert" aria-label ="close">
+         <span aria-hidden="true">&times;</span>
+     </button> 
+     
+        {{message}}
+
+    </div>
+    {%endfor%}
+    {%endif%}
+    {%endwith%}
+    <table class="table">
+       <br>
+       <tr>
+       <th>Serial</th>
+       <th>Book Name</th>
+       <th>Authors</th>
+       <th>Rating</th>
+       <th>Language</th>
+       <th>Publication_Date</th>
+       <th>Publisher</th>
+       <th>Action</th>
+       </tr>
+    <tbody>
+       {%set i=0%}
+       
+       {%for row in members%}
+       {%set i=i+1%}
+       <tr>
+          <th scope="row">{{i}}</th>
+          <td>{{row.title}}</td>
+          <td>{{row.authors}}</td>
+          <td>{{row.average_rating}}</td>
+          <td>{{row.language_code}}</td>
+          <td>{{row.publication_date}}</td>
+          <td>{{row.publisher}}</td>
+          <td><button onclick="onIssueBook('{{row.bookID}}','{{row.title}}')" type="button" class="btn btn-success  pull-right" data-toggle="modal" data-target="#myModal">Issue a book </button></td>
+       </tr>
+       {%endfor%}
+    </tbody>
+    </table>
+
+        </div>
+
+
+<!-- Modal -->
+
+
+<div id="myModal" class="modal fade" role="dialog">
+
+
+   <div class="modal-dialog">
+
+
+      <div class="modal-content">
+
+
+         <div class="modal-header">
+
+
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+
+            <h4 class="modal-title">Issue a book</h4>
+
+
+         </div>
+
+
+         <div class="modal-body">
+
+
+            <form action="{{ url_for('insert') }}" method="POST">
+               <div class="form-group" hidden>
+                  <label>bookid</label>
+                  <input id="book" type="text" value="" class="form-control" name="bookId"  hidden="true">
+               </div>
+               <div class="form-group" hidden>
+                  <label>bookname</label>
+                  <input id = "book_name" type="text" value="" class="form-control" name="bookName"  hidden="true">
+               </div>
+               <div class="form-group">
+                  <label>Name:</label>
+                  <input type="text" class="form-control" name="name" required="1">
+               </div>
+                <div class="form-group">
+                  <label>Email:</label>
+                  <input type="text" class="form-control" name="email" required="1">
+               </div>
+               <div class="form-group">
+                  <label>Return Date:</label>
+                  <input type="date" class="form-control" name="returnDate" required="1">
+               </div>
+                <div class="form-group">
+                  <label>Phone:</label>
+                  <input type="text" class="form-control" name="phone" required="1">
+               </div>
+               <div class="form-group">
+
+
+                  <button class="btn btn-primary" type="submit">Insert Data</button>
+
+
+               </div>
+
+
+            </form>
+
+
+         </div>
+
+
+         <div class="modal-footer">
+
+
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+
+
+         </div>
+
+
+      </div>
+
+
+   </div>
+
+
+</div>
+
+  {% include "footer.html" %}
+    </div>
+
+
+</div>
+{% endblock %}
+
+<script> 
+   // for api fetch
+   function onIssueBook(id,book){
+      console.log(id,book,"asdfg")
+      document.getElementById("book").value=id
+      document.getElementById("book_name").value=book
+}
+</script>
+<script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+<script type="text/javascript" src="{{url_for('static', filename = 'js/bootstrap.min.js')}}"></script> 

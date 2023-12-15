@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-md  bg-dark">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/"> Books</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/member">Members</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/issuer">Transactions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/search_book"></a>
+                </li>
+            </ul> 
+            <style>
+               .nav-link {
+                color: rgb(252, 253, 251);
+                }
+            </style>
+            
+            <form action="/" method="POST" style="display: flex; justify-content: flex-end; margin-right: 10px;" > 
+                <input type="text"  name="Search" class="search" placeholder="Search here!" style="padding: 5px;  font-size: 14px; border: 2px solid #0e7a05; border-radius: 5px; outline: none;">
+                <button type="submit" style="padding: 10px; font-size: 14px;  background-color: #0fa116; color: #fff; border: 2px solid #0c922d; border-radius: 5px; cursor: pointer;">Search</button>
+            </form>
+        </div> 
+    </div>
+</nav>

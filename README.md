@@ -4,6 +4,11 @@
 A local library is in dire need of a web application to ease their work.The library management
 system must allow a librarian to track books and their quantity, books issued to members.
 
+# Technology Stack
+Backend: Flask (Python)
+Frontend: HTML, CSS, Bootstrap
+Database: MySQL
+
 # Getting Started
 1.Install requirements :-
    pip install -r requirements.txt
@@ -55,5 +60,6 @@ Book deleted
 ![Screenshot from 2023-12-18 23-07-18](https://github.com/deeptigupta222/library-management-system-flask-g/assets/121033115/e3813e4d-c9bd-49b9-9c0c-b1e7824ce525)
 
 
-
+# Conclusion
+The Library Management System, created using Flask, HTML, CSS, and Bootstrap, is a smart and user-friendly solution. It's designed to make things easy for librarians and members by simplifying tasks like handling books, managing members, and lending processes. This approach improves how the library works overall, making it a valuable tool for managing resources effectively and keeping users happy.
 

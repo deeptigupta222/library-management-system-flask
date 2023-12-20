@@ -15,14 +15,8 @@ Database: MySQL
 ```
  pip install -r requirements.txt
 ```
-2.Setup MySQL and replace host, user, password values in ***setup.py*** and ***app.py*** as required
 
-3.Create Database and Tables using setup.py
-```
- python3 setup.py
-```
-
-4.Run app
+2.Run app
 ```  
  python app.py
 ```

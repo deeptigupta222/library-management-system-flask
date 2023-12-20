@@ -11,14 +11,21 @@ Frontend: HTML, CSS, Bootstrap
 Database: MySQL
 
 # Getting Started
-1.Install requirements :-
-   pip install -r requirements.txt
+1.Install requirements 
+```
+ pip install -r requirements.txt
+```
+2.Setup MySQL and replace host, user, password values in ***setup.py*** and ***app.py*** as required
 
-2.Setup MySQL and replace host, user, password values in app.py  as required.
+3.Create Database and Tables using setup.py
+```
+ python3 setup.py
+```
 
-3.Run app
-python app.py
-
+4.Run app
+```  
+ python app.py
+```
 # Screenshots:
 # Books
 ![Screenshot from 2023-12-15 12-34-25](https://github.com/deeptigupta222/library-management-system-flask-g/assets/121033115/b24b431b-863a-43c6-8fae-c6d17f52cb29)

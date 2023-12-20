@@ -3,7 +3,7 @@
 # About
 This project was created as part of the hiring test for Frappe. [ Dev Hiring](https://frappe.io/dev-hiring-test) Test for *FRAPPE* Boost library efficiency and streamline workflows with my Flask-built web application. Manage books and members with ease, automate fee calculations, and seamlessly integrate book data via Frappe API.
 
-# Technology Stack
+# Technology Stack 
 Backend: Flask (Python)
 
 Frontend: HTML, CSS, Bootstrap
